@@ -6,7 +6,7 @@ import "github.com/jedib0t/go-pretty/table"
 type TableOptions struct {
 	Columns []int
 	SortBy  int
-	Style   table.Style
+	Style   table.Styl
 }
 
 // Column defines a column.

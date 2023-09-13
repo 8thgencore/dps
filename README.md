@@ -24,7 +24,7 @@ git clone https://github.com/8thgencore/dps.git
 
 ```bash
 cd dps
-go build
+go build -o dps cmd/cli/main.go
 ```
 
 3. Move the generated binary to a directory included in your system's PATH.

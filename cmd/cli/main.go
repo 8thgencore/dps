@@ -17,6 +17,9 @@ func main() {
 
 	var ctx = context.Background()
 
+	// Configuration
+	config.Execute()
+
 	appConfig := config.Init(ctx)
 	ctx = config.SetConfig(ctx, appConfig)
 

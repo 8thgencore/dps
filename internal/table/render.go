@@ -7,6 +7,7 @@ import (
 
 	"github.com/jedib0t/go-pretty/table"
 	"github.com/jedib0t/go-pretty/text"
+	"github.com/muesli/termenv"
 )
 
 func RenderTable(ctx context.Context, columns []Column, rows []RowData) {
@@ -24,18 +25,17 @@ func RenderTable(ctx context.Context, columns []Column, rows []RowData) {
 		headerRow[i] = col.Name
 	}
 	t.AppendHeader(headerRow)
-
 	// Configure rows
 	for _, row := range rows {
 		dataRow := make([]interface{}, len(row.Data))
 		for i, data := range row.Data {
-			dataRow[i] = text.WrapSoft(data, columns[i].Width)
+			dataRow[i] = termenv.String(text.WrapSoft(data, columns[i].Width)).Foreground(config.Theme.ColorBlue)
 		}
 		t.AppendRow(dataRow)
 	}
 
 	// Create a new table writer
-	t.SetStyle(table.StyleLight)
+	t.SetStyle(config.StyleOpt)
 	t.SetColumnConfigs([]table.ColumnConfig{
 		{Number: 1},
 	})

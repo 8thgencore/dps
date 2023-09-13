@@ -8,13 +8,13 @@ import (
 
 // Theme defines a color theme used for printing tables.
 type Theme struct {
-	colorRed     termenv.Color
-	colorYellow  termenv.Color
-	colorGreen   termenv.Color
-	colorBlue    termenv.Color
-	colorGray    termenv.Color
-	colorMagenta termenv.Color
-	colorCyan    termenv.Color
+	ColorRed     termenv.Color
+	ColorYellow  termenv.Color
+	ColorGreen   termenv.Color
+	ColorBlue    termenv.Color
+	ColorGray    termenv.Color
+	ColorMagenta termenv.Color
+	ColorCyan    termenv.Color
 }
 
 func DefaultThemeName() string {
@@ -30,33 +30,33 @@ func LoadTheme(theme string, term termenv.Profile) (Theme, error) {
 	themes := make(map[string]Theme)
 
 	themes["dark"] = Theme{
-		colorRed:     term.Color("#E88388"),
-		colorYellow:  term.Color("#DBAB79"),
-		colorGreen:   term.Color("#A8CC8C"),
-		colorBlue:    term.Color("#71BEF2"),
-		colorGray:    term.Color("#B9BFCA"),
-		colorMagenta: term.Color("#D290E4"),
-		colorCyan:    term.Color("#66C2CD"),
+		ColorRed:     term.Color("#E88388"),
+		ColorYellow:  term.Color("#DBAB79"),
+		ColorGreen:   term.Color("#A8CC8C"),
+		ColorBlue:    term.Color("#71BEF2"),
+		ColorGray:    term.Color("#B9BFCA"),
+		ColorMagenta: term.Color("#D290E4"),
+		ColorCyan:    term.Color("#66C2CD"),
 	}
 
 	themes["light"] = Theme{
-		colorRed:     term.Color("#D70000"),
-		colorYellow:  term.Color("#FFAF00"),
-		colorGreen:   term.Color("#005F00"),
-		colorBlue:    term.Color("#000087"),
-		colorGray:    term.Color("#303030"),
-		colorMagenta: term.Color("#AF00FF"),
-		colorCyan:    term.Color("#0087FF"),
+		ColorRed:     term.Color("#D70000"),
+		ColorYellow:  term.Color("#FFAF00"),
+		ColorGreen:   term.Color("#005F00"),
+		ColorBlue:    term.Color("#000087"),
+		ColorGray:    term.Color("#303030"),
+		ColorMagenta: term.Color("#AF00FF"),
+		ColorCyan:    term.Color("#0087FF"),
 	}
 
 	themes["ansi"] = Theme{
-		colorRed:     term.Color("9"),
-		colorYellow:  term.Color("11"),
-		colorGreen:   term.Color("10"),
-		colorBlue:    term.Color("12"),
-		colorGray:    term.Color("7"),
-		colorMagenta: term.Color("13"),
-		colorCyan:    term.Color("8"),
+		ColorRed:     term.Color("9"),
+		ColorYellow:  term.Color("11"),
+		ColorGreen:   term.Color("10"),
+		ColorBlue:    term.Color("12"),
+		ColorGray:    term.Color("7"),
+		ColorMagenta: term.Color("13"),
+		ColorCyan:    term.Color("8"),
 	}
 
 	if _, ok := themes[theme]; !ok {
