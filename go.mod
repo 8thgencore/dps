@@ -3,7 +3,7 @@ module dps
 go 1.20
 
 require (
-	github.com/docker/docker v24.0.4+incompatible
+	github.com/docker/docker v24.0.7+incompatible
 	github.com/jedib0t/go-pretty v4.3.0+incompatible
 	github.com/mattn/go-runewidth v0.0.14
 	github.com/muesli/termenv v0.15.2
