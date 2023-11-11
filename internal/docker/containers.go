@@ -52,7 +52,7 @@ func ShowContainers(ctx context.Context, cli *client.Client) {
 			case containerID:
 				data[j] = container.ID[:12]
 			case nameID:
-				data[j] = container.Names[0]
+				data[j] = container.Names[0][1:]
 			case statusID:
 				data[j] = container.Status
 			case imageID:

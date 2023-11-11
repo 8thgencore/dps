@@ -3,9 +3,9 @@ module dps
 go 1.20
 
 require (
-	github.com/docker/docker v24.0.4+incompatible
+	github.com/docker/docker v24.0.7+incompatible
 	github.com/jedib0t/go-pretty v4.3.0+incompatible
-	github.com/mattn/go-runewidth v0.0.14
+	github.com/mattn/go-runewidth v0.0.15
 	github.com/muesli/termenv v0.15.2
 )
 
@@ -35,7 +35,7 @@ require (
 	github.com/opencontainers/image-spec v1.0.2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
-	github.com/spf13/cobra v1.7.0
+	github.com/spf13/cobra v1.8.0
 	github.com/stretchr/testify v1.8.4 // indirect
 	go.mongodb.org/mongo-driver v1.11.3 // indirect
 	golang.org/x/mod v0.8.0 // indirect
